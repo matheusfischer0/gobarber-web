@@ -1,13 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
 
-// import { Container } from './styles';
+import GlobalStyle from './styles/global';
+import SignIn from './pages/SignIn';
 
-const App: React.FC = () => {
-  return <>
-  <h1>Hello World</h1>
-  </>;
-}
+const App: React.FC = () => (
+  <>
+    <SignIn></SignIn>
+    <GlobalStyle></GlobalStyle>
+  </>
+);
 
 export default App;
-
