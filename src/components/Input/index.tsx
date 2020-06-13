@@ -8,7 +8,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 
 const Input: React.FC<InputProps> = () => (
   <Container>
-    <input type="text"></input>;
+    <input type="text"></input>
   </Container>
 );
 
