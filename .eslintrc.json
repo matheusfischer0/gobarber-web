@@ -17,23 +17,33 @@
     },
     "ecmaVersion": 11
   },
-  "plugins": [
-    "react",
-    "react-hooks",
-    "@typescript-eslint",
-    "prettier"
-  ],
+  "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
   "rules": {
-    "prettier/prettier":"error",
-    "react-hooks/rules-of-hooks":"error",
-    "react-hooks/exhaustive-deps":"warn",
-    "react/jsx-filename-extensions":[1,{"extensions":[".tsx"]}],
-    "import/prefer-default-export":"off",
-    "import/extensions":["error","ignorePackages",{"ts":"never","tsx":"never  "}]
+    "prettier/prettier": "error",
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/prop-types": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/jsx-filename-extensions": [
+      1,
+      {
+        "extensions": [".tsx"]
+      }
+    ],
+    "import/prefer-default-export": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "ts": "never",
+        "tsx": "never  "
+      }
+    ]
   },
-  "settings":{
-    "import/resolver":{
-      "typescript":{}
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
     }
   }
 }
