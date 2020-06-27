@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 import registerBackground from '../../assets/register-background.png';
 
@@ -9,16 +9,35 @@ export const Container = styled.div`
   display: flex;
   align-items: stretch;
 `;
+
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
-
-  place-content: center;
-
   align-items: center;
+  justify-content: center;
 
   width: 100%;
   max-width: 700px;
+`;
+
+const appearFromRight = keyframes`
+  from{
+  opacity:0;
+  transform: translateX(50px);
+  }
+  to{
+  opacity:1;
+  transform: translateX(0px);
+  }
+`;
+
+export const AnimationContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  animation: ${appearFromRight} 1s;
 
   form {
     margin: 80px 0;
@@ -31,9 +50,19 @@ export const Content = styled.div`
 
     button {
     }
+    a {
+      color: #f4ede8;
+      display: block;
+      margin-top: 24px;
+      text-decoration: none;
+      transition: color 0.2s;
+      &:hover {
+        color: ${shade(0.2, '#f4ede8')};
+      }
+    }
   }
-  a {
-    color: #f4ede8;
+  > a {
+    color: #ff9000;
     margin-top: 24px;
     text-decoration: none;
 
@@ -47,10 +76,11 @@ export const Content = styled.div`
     }
 
     &:hover {
-      color: ${shade(0.2, '#F4EDE8')};
+      color: ${shade(0.2, '#ff9000')};
     }
   }
 `;
+
 export const Background = styled.div`
   flex: 1;
   background: url(${registerBackground}) no-repeat center;

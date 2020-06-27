@@ -20,11 +20,24 @@ export const Content = styled.div`
   max-width: 700px;
 `;
 
+const appearFromLeft = keyframes`
+  from{
+  opacity:0;
+  transform: translateX(-50px);
+  }
+  to{
+  opacity:1;
+  transform: translateX(0px);
+  }
+`;
+
 export const AnimationContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  animation: ${appearFromLeft} 1s;
 
   form {
     margin: 80px 0;
